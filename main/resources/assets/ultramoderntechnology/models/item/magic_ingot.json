@@ -1,0 +1,14 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "ultramoderntechnology:item/a_b"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "ultramoderntechnology:size": 16
+      },
+      "model": "ultramoderntechnology:item/magic_ingot2"
+    }
+  ]
+}
