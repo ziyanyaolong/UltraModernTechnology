@@ -1,2 +1,4 @@
 # UltraModernTechnology
 运行于minecraft
+目前只支持forge端，fabric端需要等到我学习之后才会做
+英语大部分内容为机翻，整体语言为简体中文为主
