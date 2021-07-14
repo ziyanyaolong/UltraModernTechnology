@@ -1,5 +1,6 @@
 {
   "item.ultramoderntechnology.obsidian_ingot": "老婆",
   "item.ultramoderntechnology.obsidian_apple":"黑曜石苹果",
-  "itemGroup.material": "超科技时代：材料"
+  "itemGroup.material": "超科技时代：材料",
+  "message.hello_block.hello": "%s"
 }
