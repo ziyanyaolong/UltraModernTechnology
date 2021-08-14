@@ -5,6 +5,7 @@ import com.ZiYanYaoLong.UltraModernTechnology.Registry.RegistryBass.BlockRegistr
 import com.ZiYanYaoLong.UltraModernTechnology.Registry.RegistryBass.ItemRegistryBass;
 import com.ZiYanYaoLong.UltraModernTechnology.Registry.RegistryBass.TileEntityTypeRegistryBass;
 import com.ZiYanYaoLong.UltraModernTechnology.Registry.UserRegistry.BlockRegistry;
+import com.ZiYanYaoLong.UltraModernTechnology.Registry.UserRegistry.ContainerTypeRegistry;
 import com.ZiYanYaoLong.UltraModernTechnology.Registry.UserRegistry.ItemRegistry;
 import com.ZiYanYaoLong.UltraModernTechnology.Registry.UserRegistry.TileEntityTypeRegistry;
 import net.minecraftforge.common.MinecraftForge;
@@ -24,8 +25,8 @@ public class UltraModernTechnology {
 
         ItemRegistryBass.readItem().register(modEventBus);
         BlockRegistryBass.readBlock().register(modEventBus);
-        TileEntityTypeRegistryBass.TILE_ENTITIES.register(modEventBus);
-
+        TileEntityTypeRegistryBass.readTileEntities().register(modEventBus);
+        ContainerTypeRegistry.CONTAINERS.register(modEventBus);
         MinecraftForge.EVENT_BUS.register(this);
 
     }

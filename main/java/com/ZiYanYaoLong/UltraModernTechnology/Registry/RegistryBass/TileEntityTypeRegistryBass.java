@@ -13,8 +13,6 @@ import java.util.function.Supplier;
 
 public class TileEntityTypeRegistryBass {
     private TileEntityTypeRegistryBass() {
-//        tileEntity  = TILE_ENTITIES.register("tttaas",
-//                () -> TileEntityType.Builder.of(ObsidianCounterTileEntity::new, BlockRegistry.my_tt.readRegistry().get()).build(null));;
     }
 
     private TileEntityTypeRegistryBass(String name, Supplier blockTileEntity, Block block) {
@@ -44,12 +42,20 @@ public class TileEntityTypeRegistryBass {
         return RegistryTable.addRegistryList(new TileEntityTypeRegistryBass(blockTileEntity.getClass().getName().toLowerCase() + "_" + "tile_entity" + "_" + rand.nextInt(Integer.MAX_VALUE), blockTileEntity, block.readRegistry()));
     }
 
+    public static DeferredRegister<TileEntityType<?>> readTileEntities(){
+        return TILE_ENTITIES;
+    }
+
+    public RegistryObject<TileEntityType<?>> readTileEntity() {
+        return tileEntity;
+    }
+
     private static BlockRegistryBass blockA;
 //    public final String readRegistryName() { return _name_; }
 //    public final TileEntityType<?> readTileEntityType(){ return _tileEntityType_; }
 //    public TileEntityType<?> setTileEntityType(TileEntityType<?> tileEntityType) { return _tileEntityType_ = tileEntityType; }
-    public static final DeferredRegister<TileEntityType<?>> TILE_ENTITIES = DeferredRegister.create(ForgeRegistries.TILE_ENTITIES, GeneralInformation.MOD_ID);
-    public RegistryObject<TileEntityType<?>> tileEntity;
+    private static final DeferredRegister<TileEntityType<?>> TILE_ENTITIES = DeferredRegister.create(ForgeRegistries.TILE_ENTITIES, GeneralInformation.MOD_ID);
+    private RegistryObject<TileEntityType<?>> tileEntity;
 //    private TileEntityType<?> _tileEntityType_;
 //    private String _name_;
 }

@@ -25,7 +25,7 @@ public class ObsidianCounterTileEntity extends TileEntity implements ITickableTi
     private boolean flag = false;
 
     public ObsidianCounterTileEntity() {
-        super(TileEntityTypeRegistry.tttaas.tileEntity.get());
+        super(TileEntityTypeRegistry.tttaas.readTileEntity().get());
 //        super(null);
     }
 
